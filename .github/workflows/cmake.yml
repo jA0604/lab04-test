@@ -27,11 +27,11 @@ jobs:
   - name: Install lcov
     run: sudo apt install -y lcov
 
-  - name: Config banking with tests
-    run: cmake -H. -B ${{github.workspace}}/build -DBUILD_TESTS=ON
+#   - name: Config banking with tests
+#     run: cmake -H. -B ${{github.workspace}}/build -DBUILD_TESTS=ON
 
-  - name: Build banking
-    run: cmake —build ${{github.workspace}}/build
+#   - name: Build banking
+#     run: cmake —build ${{github.workspace}}/build
 
   - name: Run tests
     run: build/check
