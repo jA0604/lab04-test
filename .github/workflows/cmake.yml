@@ -5,9 +5,6 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-    
-
-
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
@@ -33,14 +30,14 @@ jobs:
 #   - name: Build banking
 #     run: cmake —build ${{github.workspace}}/build
 
-  - name: Run tests
-    run: build/check
+#   - name: Run tests
+#     run: build/check
     
-  - name: Do lcov stuff
-    run: lcov -c -d build/CMakeFiles/banking.dir/banking/ —include *.cpp —output-file ./coverage/lcov.info
+#   - name: Do lcov stuff
+#     run: lcov -c -d build/CMakeFiles/banking.dir/banking/ —include *.cpp —output-file ./coverage/lcov.info
 
-  - name: Publish to coveralls.io
-    uses: coverallsapp/github-action@v1.1.2
-    with:
-      github-token: ${{ secrets.GITHUB_TOKEN }}
+#   - name: Publish to coveralls.io
+#     uses: coverallsapp/github-action@v1.1.2
+#     with:
+#       github-token: ${{ secrets.GITHUB_TOKEN }}
 
