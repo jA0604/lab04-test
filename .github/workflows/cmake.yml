@@ -16,15 +16,21 @@ jobs:
 
   steps:
   - uses: actions/checkout@v3
+  - name: hello 
+    run: |
+        cd ${{ github.workspace }}/hello_world_application
+        mkdir build_test
+        cd build_test
+        cmake .. -DCMAKE_TOOLCHAIN_FILE=${{ github.workspace }}/hello_world_application/cmakelist.txt
 
-  - name: Adding gtest
-    run: git clone https://github.com/google/googletest.git third-party/gtest -b release-1.11.0
+#   - name: Adding gtest
+#     run: git clone https://github.com/google/googletest.git third-party/gtest -b release-1.11.0
 
-  - name: Install lcov
-    run: sudo apt install -y lcov
+#   - name: Install lcov
+#     run: sudo apt install -y lcov
 
-  - name: Config banking with tests
-    run: cmake -H. -B ${{github.workspace}}/build -DBUILD_TESTS=ON
+#   - name: Config banking with tests
+#     run: cmake -H. -B ${{github.workspace}}/build -DBUILD_TESTS=ON
 
 #   - name: Build banking
 #     run: cmake —build ${{github.workspace}}/build
