@@ -22,7 +22,7 @@ jobs:
         mkdir build_test
         cd build_test
         cmake ..
-        cmake --build . --config ${{env.BUILD_TYPE}}
+        cmake --build . --config
         
   - name: formatter_lib
     run: |
