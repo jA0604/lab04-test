@@ -13,7 +13,7 @@ cmake_minimum_required(VERSION 3.4)
   project (hello)
   
   #Делаем библиотеку banking и добавляем директорию с заголовками
-  add_library(hello STATIC ${CMAKE_CURRENT_SOURCE_DIR}/hello_world_application/Transaction.cpp ${CMAKE_CURRENT_SOURCE_DIR}/hello_world_application/hello_world.cpp)
+  add_library(hello STATIC ${CMAKE_CURRENT_SOURCE_DIR}/hello_world_application/hello_world.cpp ${CMAKE_CURRENT_SOURCE_DIR}/hello_world_application/hello_world.cpp)
   target_include_directories(hello PUBLIC
   ${CMAKE_CURRENT_SOURCE_DIR}/hello )
   
